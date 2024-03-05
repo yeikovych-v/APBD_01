@@ -12,12 +12,15 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Please enter a number");
             if (int.TryParse(Console.ReadLine(), out int userInput)) {
-                if(userInput>0)
+                if(userInput == 7)
                 {
-                    Console.WriteLine("The value is a positive one");
+                    Console.WriteLine("You have entered a lucky value!");
                 }else if (userInput < 0)
                 {
                     Console.WriteLine("The value is a negative one");
+                }else if (userInput > 0)
+                {
+                    Console.WriteLine("The value is a positive one");
                 }
                 else
                 {
@@ -28,9 +31,6 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Invalid input. Please enter an integer");
             }
-
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
         }
     }
 }
